@@ -57,9 +57,9 @@ restService.post('/webhook', function (req, res) {
         console.log('result: ', speech);
 		client.publish('apiai/jreading', speech)
 		//console.log("rest in peace")
-var aa = client.subscribe('apiai/hreading')
+//var aa = client.subscribe('apiai/hreading')
 	if (speech=='value of the sensor is'){
-	speech += 'value of the sensor is ' + aa;
+	speech += 'value of the sensor is ' + sread;
 	}
 
 		fs.readFile('test','utf8', function(err, contents) {
